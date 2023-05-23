@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" readonly id="input_box">
+<div>
+    <label>
+        <button value="1" onclick="button(this)"> 1 </button>
+        <button value="2" onclick="button(this)"> 2 </button>
+        <button value="3" onclick="button(this)"> 3 </button>
+        <button value="+" onclick="button(this)"> + </button>
+        <button value="backspace" onclick="backspace()"> backspace </button>
+    </label>
+    <br>
+    <label>
+        <button value="4" onclick="button(this)"> 4 </button>
+        <button value="5" onclick="button(this)"> 5 </button>
+        <button value="6" onclick="button(this)"> 6 </button>
+        <button value="-" onclick="button(this)"> - </button>
+    </label>
+    <br>
+    <label>
+        <button value="7" onclick="button(this)"> 7 </button>
+        <button value="8" onclick="button(this)"> 8 </button>
+        <button value="9" onclick="button(this)"> 9 </button>
+        <button value="*" onclick="button(this)"> * </button>
+    </label>
+    <br>
+    <label>
+        <button value="0" onclick="button(this)"> 0 </button>
+        <button value="/" onclick="button(this)"> / </button>
+        <button value="." onclick="button(this)"> . </button>
+        <button value="=" onclick="answer()"> = </button>
+        <button value="reset" onclick="reset()"> reset </button>
+    </label>
+</div>
+<script>
+    function button(e) {
+        let button = e.getAttribute('value');
+        if (document.getElementById("input_box").value.charAt(document.getElementById("input_box").value.length - 1) == '.'
+        && button == '.') {
+            alert(".을 연속으로 입력할 수 없습니다.")
+        }else if (document.getElementById("input_box").value.charAt(document.getElementById("input_box").value.length - 1) == '+'
+            && button == '+') {
+            alert("+을 연속으로 입력할 수 없습니다.")
+        } else if(document.getElementById("input_box").value.charAt(document.getElementById("input_box").value.length - 1) == '-'
+            && button == '-'){
+            alert("-을 연속으로 입력할 수 없습니다.")
+        }else if (document.getElementById("input_box").value.charAt(document.getElementById("input_box").value.length - 1) == '*'
+            && button == '*') {
+            alert("*을 연속으로 입력할 수 없습니다.")
+        } else if(document.getElementById("input_box").value.charAt(document.getElementById("input_box").value.length - 1) == '/'
+            && button == '/') {
+            alert("/을 연속으로 입력할 수 없습니다.")
+        }else {
+            document.getElementById("input_box").value += button;
+        }
+
+    }
+
+    function answer() {
+        document.getElementById("input_box").value = eval(document.getElementById("input_box").value);
+    }
+
+    function reset() {
+        document.getElementById("input_box").value = '';
+    }
+
+    function backspace() {
+        document.getElementById("input_box").value = document.getElementById("input_box").value.slice(0, -1);
+    }
+</script>
+</body>
+</html>
