@@ -10,5 +10,16 @@ public class TestReferenceMain {
         System.out.println(hong.getName());
         System.out.println(hong.getTelephone());
         System.out.println(hong.getAge());
+
+        System.out.println();
+
+        TestReference kim = new TestReference();
+        kim.setName("김규민");
+        kim.setTelephone("4321-4231");
+        kim.setAge(20);
+
+        System.out.println(kim.getName());
+        System.out.println(kim.getTelephone());
+        System.out.println(kim.getAge());
     }
 }
