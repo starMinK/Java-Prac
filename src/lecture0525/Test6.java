@@ -2,7 +2,7 @@
 package lecture0525;
 
 public class Test6 {
-
+444
     public static void main(String[] args) {
         int s;
         GetterSetter gs = new GetterSetter();
