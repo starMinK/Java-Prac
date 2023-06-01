@@ -11,7 +11,6 @@ public class AccessModifierOfMember {
         AccessModifierOfMemberB b = new AccessModifierOfMemberB();  //b: protected
         AccessModifierOfMemberC c = new AccessModifierOfMemberC();  //c: default
         AccessModifierOfMemberD d = new AccessModifierOfMemberD();  //d: private
-
         a.print();
         b.print();
         c.print();
