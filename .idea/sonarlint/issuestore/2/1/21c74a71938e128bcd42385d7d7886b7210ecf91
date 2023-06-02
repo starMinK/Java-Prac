@@ -1,18 +1,0 @@
-
-s	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(ÑÒŸ¹øÿÿÿÿ
-a	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(©¤¡v
-h
-java:S3776
-"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(Çµí‘
-1
-java:S3626"Remove this redundant jump.(ÉŠ©ƒ
-1
-java:S3626,"Remove this redundant jump.(ÔÆ¤æ
-Z
-java:S3358"DExtract this nested ternary operation into an independent statement.(¹ë¶û
-Z
-java:S3358"DExtract this nested ternary operation into an independent statement.(¹ë¶û
-Z
-java:S3358"DExtract this nested ternary operation into an independent statement.(¹ë¶û
-Q	java:S125%"<This block of commented-out lines of code should be removed.(†€éˆ
-Q	java:S125,"<This block of commented-out lines of code should be removed.(ÔÆ¤æ
