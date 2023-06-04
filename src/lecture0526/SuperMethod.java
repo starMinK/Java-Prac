@@ -21,7 +21,11 @@ class Super2 extends Super {
 }
 public class SuperMethod {
     public static void main(String[] args) {
-        Super2 s2 = new Super2();
-        s2.test();
+        try {
+            Super2 s2 = new Super2();
+            s2.test();
+        } catch (Exception e) {
+            System.out.println("예외가 발생했습니다: " + e.getMessage());
+        }
     }
 }

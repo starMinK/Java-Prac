@@ -15,54 +15,57 @@ class MultiplicationGame implements Runnable {
     @Override
     public void run() {
         Scanner scanner = new Scanner(System.in);
-        while (running) {
-            // 구구단 문제 출제
-            int num1 = (int) (Math.random() * 9) + 1;
-            int num2 = (int) (Math.random() * 9) + 1;
-            int answer = num1 * num2;
-            System.out.println(num1 + " * " + num2 + " = ?");
+        try {
+            while (running) {
+                // 구구단 문제 출제
+                int num1 = (int) (Math.random() * 9) + 1;
+                int num2 = (int) (Math.random() * 9) + 1;
+                int answer = num1 * num2;
+                System.out.println(num1 + " * " + num2 + " = ?");
 
-            // 답 제출 및 시간 제한 설정
-            Thread timerThread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        Thread.sleep(5000); // 5초 제한 시간 설정
-                        if (running) {
-                            System.out.println("시간이 초과되었습니다!");
-                            stopGame();
+                // 답 제출 및 시간 제한 설정
+                Thread timerThread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            Thread.sleep(5000); // 5초 제한 시간 설정
+                            if (running) {
+                                System.out.println("시간이 초과되었습니다!");
+                                stopGame();
+                            }
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
                         }
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
                     }
+                });
+                timerThread.start();
+
+                String userInput = scanner.nextLine();
+                if (userInput.equalsIgnoreCase("exit")) {
+                    stopGame();
+                    break;
                 }
-            });
-            timerThread.start();
 
-            String userInput = scanner.nextLine();
-            if (userInput.equalsIgnoreCase("exit")) {
-                stopGame();
-                break;
+                int userAnswer;
+                try {
+                    userAnswer = Integer.parseInt(userInput);
+                } catch (NumberFormatException e) {
+                    System.out.println("올바른 숫자를 입력해주세요!");
+                    continue;
+                }
+
+                // 정답 확인
+                if (userAnswer == answer) {
+                    System.out.println("정답입니다!");
+                } else {
+                    System.out.println("틀렸습니다. 정답은 " + answer + "입니다.");
+                }
+
+                timerThread.interrupt();
             }
-
-            int userAnswer;
-            try {
-                userAnswer = Integer.parseInt(userInput);
-            } catch (NumberFormatException e) {
-                System.out.println("올바른 숫자를 입력해주세요!");
-                continue;
-            }
-
-            // 정답 확인
-            if (userAnswer == answer) {
-                System.out.println("정답입니다!");
-            } else {
-                System.out.println("틀렸습니다. 정답은 " + answer + "입니다.");
-            }
-
-            timerThread.interrupt();
+        } finally {
+            scanner.close();
         }
-        scanner.close();
     }
 
     public void stopGame() {

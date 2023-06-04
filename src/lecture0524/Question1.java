@@ -1,9 +1,5 @@
 package lecture0524;
 
-import lecture0519.Hello;
-
-import java.time.Year;
-import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 

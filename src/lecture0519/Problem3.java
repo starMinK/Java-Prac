@@ -1,5 +1,6 @@
 package lecture0519;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Problem3 {
@@ -27,8 +28,16 @@ public class Problem3 {
         }
 
         sum = 0;
-        i = sc.nextInt();
-        end = sc.nextInt();
+        try {
+            System.out.println("시작 숫자를 입력하세요: ");
+            i = sc.nextInt();
+            System.out.println("종료 제한을 입력하세요: ");
+            end = sc.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("잘못된 입력입니다. 프로그램을 종료합니다.");
+            System.exit(0);
+        }
+
         do {
             i++;
             sum += i;

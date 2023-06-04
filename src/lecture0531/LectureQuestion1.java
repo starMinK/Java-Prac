@@ -16,10 +16,15 @@ class LectureQuestionB {
     LectureQuestionA inner = new LectureQuestionA() {
         @Override
         public void printData() {
-            System.out.println("data: " + data);
+            try {
+                System.out.println("data: " + data);
+            } catch (Exception e) {
+                System.out.println("예외가 발생했습니다: " + e.getMessage());
+            }
         }
     };
 }
+
 public class LectureQuestion1 {
     public static void main(String[] args) {
         LectureQuestionB outer = new LectureQuestionB();
