@@ -1,0 +1,14 @@
+
+u	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(›ûÅò8í‰àÆˆ1
+E
+java:S1604"(Make this anonymous inner class a lambda(›Ùô§8í‰àÆˆ1
+K
+java:S2140")Use "java.util.Random.nextInt()" instead.(¹òŞ”üÿÿÿÿ8ŠàÆˆ1
+K
+java:S2140")Use "java.util.Random.nextInt()" instead.(ÃÍ’®ùÿÿÿÿ8ŠàÆˆ1
+{
+java:S2142$"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8ı®Ú‡1
+L
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8ŠàÆˆ1
+{
+java:S2142T"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8ŠàÆˆ1
