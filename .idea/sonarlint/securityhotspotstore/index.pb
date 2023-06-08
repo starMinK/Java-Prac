@@ -45,21 +45,3 @@ W
 'src/lecture0605/YieldRunnableState.java,3\e\3ee7f138d88778ee0a0db62130e32db333076342
 U
 %src/lecture0605/WatingWaitNotify.java,6\a\6aec97fce0cc6a53f9cb9d0f7c9b199e4534094e
-R
-"src/lecture0605/GenericMethod.java,3\4\34554f65bf996d61b7c5f5580a78f2796c7f5b30
-]
--src/lecture0605/InheritanceGenericMethod.java,f\9\f93a1db66aead790cc42ddef036766ae638870c2
-\
-,src/lecture0605/InheritanceGenericClass.java,a\4\a4a6ffd3c65699b401f6d701bc0e979a543ea4f9
-`
-0src/lecture0605/BoundedTypeOfInputArguments.java,0\d\0def376f6387c1fc99cedc519b589c9a3e5a70bc
-P
- src/lecture0605/ArrayVsList.java,a\9\a9e90d5c22dfe11a229f2ec43cf0ed9b8788d536
-T
-$src/lecture0605/ArrayListMethod.java,b\a\ba51da668e7fb00af8590854a1f9575b10811bdc
-R
-"src/lecture0605/TreeSetMethod.java,d\1\d12272db51c1ed1c4b60a58b8cfd79effcd90c97
-Q
-!src/lecture0605/ListQuestion.java,4\3\43f6a2a1fa54ccfc1c947a13383d79daf04c733f
-T
-$src/lecture0605/TreeSetQuestion.java,6\7\67ceaa0f53f05f5ffd7a0e548ec26f5aa7e56f03
